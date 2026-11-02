@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Rola ❤️</title>
+<link rel="stylesheet" href="index.css">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<body>
+    <div class="background"></div>
+
+<div class="hero">
+<div class="hero-content">
+
+<div class="top-text">A little world made especially for you</div>
+
+<div class="decor">🌷 ♡ ✨</div>
+
+<h1>Rola</h1>
+
+<p>
+Some people are simply a beautiful part of the story.
+And you, Rola, are one of those people.
+</p>
+
+<div class="scroll">A LITTLE SOMETHING FOR YOU ↓</div>
+
+</div>
+</div>
+
+
+
+<section>
+
+<div class="section-subtitle">A NOTE FROM THE HEART</div>
+
+<div class="section-title">Dear Rola...</div>
+
+<div class="letter">
+
+<h2>To Someone Truly Special ♡</h2>
+
+<p>
+I wanted to create something different for you.
+Something that would remind you that you are appreciated,
+not because of anything you have to offer, but simply
+because you are you.
+</p>
+
+<p>
+There is something beautiful about people who bring
+their own kind of energy wherever they go.
+People whose presence makes an ordinary moment
+feel a little more memorable.
+</p>
+
+<p>
+I hope you never doubt your worth.
+I hope you always find reasons to be proud of yourself,
+opportunities that make you grow, and people who
+recognise just how wonderful you are.
+</p>
+
+<p>
+May life be gentle with you. May your dreams become
+beautiful realities, and may happiness find you in
+the most unexpected places.
+</p>
+
+<div class="signature">With affection ♡</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="section-subtitle">THINGS YOU SHOULD ALWAYS REMEMBER</div>
+
+<div class="section-title">A Few Little Reminders</div>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">🌹</div>
+<h3>You Are Special</h3>
+<p>
+Never measure your worth by how others treat you.
+You deserve genuine kindness and appreciation.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🦋</div>
+<h3>Keep Growing</h3>
+<p>
+You are allowed to change, learn, grow and become
+an even more beautiful version of yourself.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">💗</div>
+<h3>You Are Appreciated</h3>
+<p>
+Even the little things about you deserve to be
+celebrated. Never underestimate your presence.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="surprise-box">
+
+<div class="section-title">One More Thing...</div>
+
+<p>
+There is a little message waiting for you.
+I hope you take a moment to read it.
+</p>
+
+<button onclick="reveal()">Open Your Special Message ♡</button>
+
+<div id="secret"></div>
+
+</div>
+
+</section>
+
+
+<div class="final">
+
+<h2>Keep Blooming, Rola 🌷</h2>
+
+<p>
+The world is full of beautiful things, but never forget
+that you are one of them.
+
+Thank you for being you.
+You deserve beautiful things, beautiful moments
+and a life filled with genuine happiness.
+
+Always remember that. ❤️
+</p>
+
+</div>
+
+<footer>
+A LITTLE GIFT MADE WITH LOVE · JUST FOR ROLA
+</footer>
+<script>
+
+function reveal(){
+
+let secret=document.getElementById("secret");
+
+secret.style.display="block";
+
+secret.innerHTML=
+"Rola, if there's one thing I hope you never forget, "+
+"it's that your existence matters, your happiness matters, "+
+"and you deserve to be celebrated. "+
+"May you never run out of reasons to feel loved and appreciated. ❤️";
+
+}
+
+function floatingHearts(){
+
+let symbols=["♡","🌸","💗","✨","🌷"];
+
+let item=document.createElement("div");
+
+item.className="floating";
+
+item.innerHTML=symbols[Math.floor(Math.random()*symbols.length)];
+
+item.style.left=Math.random()*100+"vw";
+
+item.style.fontSize=(15+Math.random()*20)+"px";
+
+item.style.animationDuration=(5+Math.random()*5)+"s";
+
+document.body.appendChild(item);
+
+setTimeout(()=>item.remove(),10000);
+
+}
+
+setInterval(floatingHearts,800);
+
+</script>
+</body>
+</html>
