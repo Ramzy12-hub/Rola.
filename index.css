@@ -1,0 +1,281 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#fff5f8;
+    color:#694454;
+    overflow-x:hidden;
+}
+
+/* BACKGROUND */
+
+.background{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    background:
+    radial-gradient(circle at 10% 20%,#ffe0eb,transparent 35%),
+    radial-gradient(circle at 90% 70%,#eadbff,transparent 35%),
+    linear-gradient(135deg,#fff5f8,#fff0f5);
+}
+
+/* FLOATING DECORATIONS */
+
+.floating{
+    position:fixed;
+    bottom:-50px;
+    pointer-events:none;
+    animation:floatUp linear forwards;
+    z-index:2;
+}
+
+@keyframes floatUp{
+    to{
+        transform:translateY(-115vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:30px 20px;
+    position:relative;
+}
+
+.hero-content{
+    max-width:750px;
+    animation:appear 2s ease;
+}
+
+@keyframes appear{
+    from{opacity:0;transform:translateY(35px);}
+    to{opacity:1;transform:translateY(0);}
+}
+
+.top-text{
+    letter-spacing:5px;
+    font-size:11px;
+    color:#b47a92;
+    text-transform:uppercase;
+}
+
+.hero h1{
+    font-family:'Great Vibes',cursive;
+    font-size:clamp(85px,17vw,150px);
+    font-weight:normal;
+    color:#c16d91;
+    margin:20px 0;
+    text-shadow:0 5px 25px #d99bbd55;
+}
+
+.hero p{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(18px,4vw,25px);
+    line-height:1.8;
+    max-width:600px;
+    margin:auto;
+}
+
+.decor{
+    font-size:35px;
+    margin:25px;
+}
+
+.scroll{
+    margin-top:65px;
+    font-size:12px;
+    letter-spacing:3px;
+    color:#bd829c;
+}
+
+/* GENERAL SECTIONS */
+
+section{
+    padding:100px 22px;
+    text-align:center;
+}
+
+.section-title{
+    font-family:'Great Vibes',cursive;
+    font-size:65px;
+    color:#c16d91;
+    margin-bottom:20px;
+}
+
+.section-subtitle{
+    font-size:12px;
+    letter-spacing:4px;
+    color:#b88a9c;
+    margin-bottom:40px;
+}
+
+/* LETTER */
+
+.letter{
+    max-width:750px;
+    margin:auto;
+    background:rgba(255,255,255,.8);
+    padding:clamp(30px,7vw,65px);
+    border-radius:8px 40px 8px 40px;
+    box-shadow:0 20px 70px #c18ba51c;
+    border:1px solid #f5d9e4;
+    position:relative;
+}
+
+.letter:before{
+    content:"♡";
+    position:absolute;
+    top:15px;
+    right:25px;
+    font-size:35px;
+    color:#e5a5bd;
+}
+
+.letter h2{
+    font-family:'Playfair Display',serif;
+    font-size:29px;
+    color:#a95e80;
+    margin-bottom:25px;
+}
+
+.letter p{
+    font-size:15px;
+    line-height:2.2;
+    margin-bottom:20px;
+    text-align:left;
+    color:#745665;
+}
+
+.signature{
+    font-family:'Great Vibes',cursive;
+    font-size:38px;
+    color:#c16d91;
+    text-align:right;
+    margin-top:30px;
+}
+
+/* APPRECIATION CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    max-width:950px;
+    margin:45px auto;
+}
+
+.card{
+    background:#fff;
+    padding:35px 25px;
+    border-radius:25px;
+    box-shadow:0 15px 35px #b57a9017;
+    transition:.4s;
+    border:1px solid #f8e0e9;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card .icon{
+    font-size:35px;
+    margin-bottom:20px;
+}
+
+.card h3{
+    font-family:'Playfair Display',serif;
+    color:#b56e8d;
+    margin-bottom:15px;
+}
+
+.card p{
+    font-size:13px;
+    line-height:2;
+}
+
+/* SURPRISE */
+
+.surprise-box{
+    max-width:650px;
+    margin:auto;
+    padding:50px 25px;
+    background:linear-gradient(135deg,#f9dce8,#f0e4ff);
+    border-radius:35px;
+}
+
+.surprise-box p{
+    line-height:2;
+    margin-bottom:25px;
+}
+
+button{
+    border:none;
+    padding:16px 35px;
+    background:#bc7291;
+    color:white;
+    border-radius:50px;
+    font-family:'Poppins',sans-serif;
+    font-size:14px;
+    cursor:pointer;
+    transition:.4s;
+    box-shadow:0 10px 25px #bc729155;
+}
+
+button:hover{
+    transform:scale(1.06);
+    background:#985673;
+}
+
+#secret{
+    margin-top:30px;
+    font-family:'Playfair Display',serif;
+    font-size:21px;
+    line-height:1.8;
+    color:#985673;
+    display:none;
+}
+
+/* FINAL */
+
+.final{
+    background:linear-gradient(135deg,#f9dce8,#e9ddf7);
+    padding:110px 20px;
+}
+
+.final h2{
+    font-family:'Great Vibes',cursive;
+    font-size:75px;
+    color:#a95e80;
+    margin-bottom:25px;
+}
+.final p{
+    max-width:600px;
+    margin:auto;
+    line-height:2;
+}
+footer{
+    text-align:center;
+    padding:35px;
+    font-size:11px;
+    letter-spacing:3px;
+    color:#a87d91;
+}
+@media(max-width:600px){
+    .section-title{font-size:53px;}
+    section{padding:75px 18px;}
+    .letter p{text-align:left;}
+}
